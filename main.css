@@ -1,0 +1,174 @@
+body{
+    background-color: rgb(203, 197, 183);
+    margin: 0px;
+}
+
+.headerleft {
+    font-variant: small-caps;
+    position: absolute;
+    top: 2px;
+    right: .6vw;
+    color: black;
+    text-shadow: -0.5px 2px 4px rgb(203, 197, 183), 2px 3px 2px black;
+    font-size: 6vh;
+    width: inherit;
+}
+
+.headerright {
+    font-variant: small-caps;
+    position: absolute;
+    top: 2px;
+    left: .4vw;
+    color: white;
+    text-shadow: -0.5px 2px 4px rgb(203, 197, 183), 2px 3px 2px black;
+    font-size: 6vh;
+    width: inherit;
+}
+
+
+/* erthang */
+.wrapper{
+    position: static;
+    padding: 0px;
+}
+
+
+                    /* fixed: in relation to the frame */
+
+
+                        /* layer 4: diamond nav */
+
+.layer4_diamondnav{
+    position: fixed;
+    z-index: 4;
+}
+
+                        /*  layer 3: gradient */
+
+.layer3_gradient{
+    position: fixed;
+    z-index: 3;
+}
+
+                    /*  layer 2: fixed, opaque image */
+
+.layer2_opaqueimage{
+    position: fixed;
+    top: 0px;
+    display: grid;
+    grid-template-rows: 1 auto;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 0rem;
+    z-index: 2;
+}
+
+.box21a {
+    position: static;
+    padding: 0px;
+    grid-template-rows: 1, 2;
+    grid-template-columns: 1, 2;
+}
+
+.box21b {
+    position: static;
+    padding: 0px;
+    grid-template-rows: 1, 2;
+    grid-template-columns: 2, 3;
+    background: linear-gradient(115deg, transparent 45%, white);
+}
+
+
+                            /* static: ground floor */
+.layer1_grid {
+    /* width: 100vw; */
+    position: relative;
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 0rem;
+    z-index: 1;
+}
+
+                                /* row 1 */
+.box11a {
+    grid-template-rows: 1, 2;
+    grid-template-columns: 1, 2;
+    padding: 0px;
+}
+
+.box11b {
+    grid-template-rows: 1, 2;
+    grid-template-columns: 2, 3;
+    background: linear-gradient(115deg, transparent 65%, white);
+}
+
+                                /* row 2 */
+.box12a {
+    grid-template-rows: 2, 3;
+    grid-template-columns: 1, 2;
+    padding: 0px;
+    /* opacity: 0; */
+}
+
+.box12b {
+    grid-template-rows: 2, 3;
+    grid-template-columns: 2, 3;
+    background: linear-gradient(115deg, transparent 65%, white);
+}
+
+                                /* diamond */
+.diamond {
+    border-style: solid;
+    border-color: transparent transparent navy transparent;
+    border-width: 0 25px 25px 25px;
+    height: 0;
+    width: 50px;
+    box-sizing: content-box;
+    position: relative;
+    margin: 20px 0 50px 0;
+    }
+
+.diamond:after {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: -25px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: navy transparent transparent transparent;
+    border-width: 70px 50px 0 50px;
+}
+
+                            /* hanging out */
+
+.hangingout {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 100vh;
+    /* width: 50vw; */
+}
+
+.hangingout_opaque {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 100vh;
+    /* width: 50vw; */
+    opacity: 0.4;
+}
+
+.hangingout_trans {
+    position: absolute;
+    top: 100vh;
+    right: 0px;
+    /* width: 50vw; */
+    opacity: 0.1;
+}
+
+.container {
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
